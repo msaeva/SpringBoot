@@ -4,22 +4,22 @@ import java.util.Date;
 import java.util.List;
 
 public class UserModel {
-    private String id; // –  username of the user.
+    private Long id; // –  username of the user.
     private String username; // –  username of the user.
     private String password; //– password of the user.
     private String firstName; //–  first name of the user.
     private String lastName; //–  last name of the user.
     private Boolean isActive; //– true OR false.
-    private List<UserRoleModel> role; //–  user's role (User or Admin).
+    private List<UserRoleModel> roles; //–  user's role (User or Admin).
     private String imageUrl;//– a url of user's picture.
     private Date created; // a date and time.
     private Date modified;//– a date and time.
 
-    public String getId() {
+    public Long getId() {
         return id;
     }
 
-    public UserModel setId(String id) {
+    public UserModel setId(Long id) {
         this.id = id;
         return this;
     }
@@ -69,12 +69,12 @@ public class UserModel {
         return this;
     }
 
-    public List<UserRoleModel> getRole() {
-        return role;
+    public List<UserRoleModel> getRoles() {
+        return roles;
     }
 
-    public UserModel setRole(List<UserRoleModel> role) {
-        this.role = role;
+    public UserModel setRoles(List<UserRoleModel> roles) {
+        this.roles = roles;
         return this;
     }
 
@@ -103,5 +103,8 @@ public class UserModel {
     public UserModel setModified(Date modified) {
         this.modified = modified;
         return this;
+    }
+    public boolean isValid(){
+        return this.id != null;
     }
 }

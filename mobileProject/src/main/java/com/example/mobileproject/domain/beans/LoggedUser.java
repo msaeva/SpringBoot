@@ -7,7 +7,7 @@ import java.util.List;
 public class LoggedUser {
     private Long id;
     private String username;
-    private List<UserRoleModel> roleModels  ;
+    private List<UserRoleModel> roleModels;
 
     public Long getId() {
         return id;
@@ -34,5 +34,11 @@ public class LoggedUser {
     public LoggedUser setRoleModels(List<UserRoleModel> roleModels) {
         this.roleModels = roleModels;
         return this;
+    }
+
+    public void clearFields() {
+        this.id = null;
+        this.username = null;
+        this.roleModels = null;
     }
 }
