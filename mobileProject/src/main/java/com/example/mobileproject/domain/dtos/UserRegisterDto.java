@@ -1,6 +1,7 @@
 package com.example.mobileproject.domain.dtos;
 
 import com.example.mobileproject.domain.enums.Role;
+import jakarta.persistence.UniqueConstraint;
 
 import javax.validation.constraints.NotNull;
 import java.util.List;
